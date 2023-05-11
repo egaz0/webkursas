@@ -1,0 +1,68 @@
+body, html {
+    background-color: rgb(255, 216, 145);
+}
+
+.container * {
+    border-radius: 10px;
+}
+
+.boxred {
+    background-color: red;
+}
+.boxblue {
+    background-color: blue;
+}
+.boxgreen {
+    background-color: green;
+}
+.boxpurple1, .boxpurple2 {
+    background-color: purple;
+}
+
+/*
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px 150px 150px;
+
+}
+
+.boxred {
+    grid-column: 1 / span 4;
+}
+
+.boxblue {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+}
+
+.boxgreen {
+    grid-column: 3 / span 2;
+}
+
+.boxpurple1 {
+    grid-column: 3 / span 1;
+}
+
+.boxpurple2 {
+    grid-column: 4 / span 1;
+}
+
+*/
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas: 
+    "br br br br"
+    "bb bb bg bg"
+    "bb bb bp1 bp2";
+}
+
+.boxred {grid-area: br;}
+.boxblue {grid-area: bb;}
+.boxgreen {grid-area: bg;}
+.boxpurple1 {grid-area: bp1;}
+.boxpurple2 {grid-area: bp2;}
